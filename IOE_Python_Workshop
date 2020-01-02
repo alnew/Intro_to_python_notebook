@@ -1,0 +1,1054 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Section 1: Python Basics"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Assignment"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "'''where the variable named on the left refers to the value on the right. \n",
+    "E.g. if y=x, y should now refer to whatever value x refers to\n",
+    "If you assign the value 9 to y, or if y=9, it can be changed in the code below, or it can be updated to y = 23, or even y = ’banana’\n",
+    "'''"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Lists\n",
+    "- Lists are sequential collection of Python data values, where each value can be indexed and identified by that index.\n",
+    "- Lists are ordered from left to right. \n",
+    "- Each value in the list is called an element.\n",
+    "- Lists are mutable, meaning you can change the elements in the list (by adding elements, removing elements, etc.)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 44,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#--Examples of 3 types of lists:\n",
+    "\n",
+    "lst1 = [10, 20, 30, 40] #--a list of integers, where each integer is an element of the list\n",
+    "\n",
+    "lst2 = ['banana', 'apple', 'orange'] #--a list of strings, where each string is an element of the list\n",
+    "\n",
+    "lst3 = [10, 20, 'banana', 'apple', 'carrot'] #--a list of integers and strings"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Manipulating Lists and List Elements"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 46,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#--Accessing elements of a string--\n",
+    "print(lst1[2])\n",
+    "print(lst2[0])"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#--Determining the length of a list--\n",
+    "print(len(lst1))\n",
+    "print(len(lst3))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#--Seeing if an element is in a list--\n",
+    "print('banana' in lst1)\n",
+    "print('banana' in lst2)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#--Changing an element in a list--\n",
+    "lst1[0] = 5 #--This changes the first element in lst1 from 10 to 5\n",
+    "print(lst1)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#--Adding an element to the end a list\n",
+    "lst2.append('strawberry') #--This adds the string strawberry to the end of lst2\n",
+    "print(lst2)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#--Adding an element to a specific part of a list\n",
+    "lst1.insert(1, 7) #--This allows you to add the number 7 to the 1st index of lst1. Change the value 0 to 2 and see what happens!\n",
+    "print(lst1)\n",
+    "\n",
+    "del lst1[0] #--This deletes the element in the 0th index of lst1\n",
+    "print(lst1)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### List exercises to try on your own or with a partner\n",
+    "- to see the result of your command, either\n",
+    " - print your list on its own line like this: print(fruit_lst)\n",
+    " - type the name of your list below your command like this: fruit_lst"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 42,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#--Lists for exercises:\n",
+    "fruit_lst = ['papaya', 'mango', 'blueberry', 'banana']\n",
+    "\n",
+    "num_lst = [50, 33, 27, 89]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 41,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['papaya', 'mango', 'blueberry', 'banana', 'orange']"
+      ]
+     },
+     "execution_count": 41,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "#--1a. Add the string 'orange' to the end fruit_lst.\n",
+    "fruit_lst.append('orange')\n",
+    "fruit_lst"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#--1b. Add the number/integer 4 to the end of num_lst.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#--2a. Delete the element in index 2 of fruit_lst.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#--2b. In num_lst, delete the element in index 3.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#--3a. Change the 0th element of fruit_lst from 'papaya' to 'carrot'.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#--3b. From num_lst, change the element in index 1 from 33 to 105.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#--4a. Check if the element 'papaya' is still in fruit_lst.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#--4b. Check if the number/integer 33 is still in num_lst\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Dictionary\n",
+    "- A Dictionary is an unordered collection that maps associations of keys with values.\n",
+    "- For example, a key can be any immutable type (such as a number or string) and its associated value can be any type of Python data object.\n",
+    "- You can think of a Python dictionary as similar to an old school dictionary, where the word you are trying to look up would be the key and the defintion of that word is its value.\n",
+    " - For example, the word 'apple' has a definition 'the round fruit of a tree of the rose family'. Here, the word 'apple' would be the key and its definition would be its value. \n",
+    " - The main difference between an old school dictionary for words and a Python dictionary is that an old school dictionary will always have its words in alphabetical order, where a Python dictionary will always return jumbled results and the order of results will differ each time you print the Python dictionary. \n",
+    " \n",
+    " \n",
+    "- Benefits of using dictionary over a list:\n",
+    " - Looking up items in a dictionary is much faster than looking up items in a list."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Working with a filled dictionary"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 67,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#--Here's a dictionary with keys and associated values--\n",
+    "pets = {'cat': 7, 'dog': 6, 'elephant':2}"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 51,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "6\n"
+     ]
+    }
+   ],
+   "source": [
+    "#--Lets extract extract some values from our pet dictionary--\n",
+    "print(pets['dog'])"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 68,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{'cat': 7, 'dog': 6}"
+      ]
+     },
+     "execution_count": 68,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "#--Deleting items from your dictionary--\n",
+    "del(pets['elephant'])\n",
+    "pets"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 69,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{'cat': 7, 'dog': 10}"
+      ]
+     },
+     "execution_count": 69,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "#--Changing dictionary values--\n",
+    "pets['dog'] = 10\n",
+    "pets"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 70,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{'cat': 7, 'dog': 10, 'rabbit': 17}"
+      ]
+     },
+     "execution_count": 70,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "#--Using operations on dictionary values--\n",
+    "pets['rabbit'] = pets['cat'] + pets['dog']\n",
+    "pets"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 59,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#--Extracting dictionary keys--\n",
+    "key_lst = list(pets.keys())"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 58,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#--Extracting dictionary values--\n",
+    "val_lst = list(pets.values())"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Creating a new dictionary from scratch"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 72,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{}"
+      ]
+     },
+     "execution_count": 72,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "#--Let's create a dictionary!--\n",
+    "my_dict = {} #--This initiates an empty dictionary where you can store keys and their associated values\n",
+    "my_dict"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 73,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{'bus': 15}"
+      ]
+     },
+     "execution_count": 73,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "#--Adding keys and their associated values to a dictionary--\n",
+    "my_dict['bus'] = 15\n",
+    "my_dict"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Dictionary Exercises"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#--Come up with and add 2 more keys and associated values to my_dict\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#--In my_dict, Change the value of the key 'bus' from 15 to 3\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#--Extract the value of 'bus' from my_dict\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Operators"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 83,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "5\n",
+      "3\n",
+      "10\n",
+      "25\n",
+      "1.8\n",
+      "1\n",
+      "4\n"
+     ]
+    }
+   ],
+   "source": [
+    "#--Addition--  NOTE: Try subbing in 2.0 for the 2 and see what happens to your result!\n",
+    "print(2+3)\n",
+    "\n",
+    "#--Subtraction--\n",
+    "print(5-2)\n",
+    "\n",
+    "#--Multiplication--\n",
+    "print(5*2)\n",
+    "\n",
+    "#--Exponentation--\n",
+    "print(5**2)\n",
+    "\n",
+    "#--Division--\n",
+    "print(9/5)\n",
+    "\n",
+    "#--Truncated Division--\n",
+    "print(9//5)\n",
+    "\n",
+    "#--Remainder, or modulus operator--\n",
+    "print(9%5)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Data Types: string, int, float "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Strings\n",
+    "- A string can be defined with either single(' ') or double quoutes (\" \") as its boundaries.\n",
+    " - Using a double quote may be easier with sentences, so it doesn't think an apostrophe is the end of a string"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 89,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Hello, world!\n",
+      "Hello, world!\n"
+     ]
+    }
+   ],
+   "source": [
+    "#--This is a string--\n",
+    "print(\"Hello, world!\")\n",
+    "\n",
+    "#--This is the same string, but with single quotes as its boundaries. Notice how we get the same result as the output from above--\n",
+    "print('Hello, world!')"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "#### Symbols for string manipulation"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 88,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Hello, \n",
+      " world!\n",
+      "Hello, \t world!\n"
+     ]
+    }
+   ],
+   "source": [
+    "#--This string has a newline character in it, or '\\n'. What does it do?\n",
+    "print(\"Hello, \\n world!\")\n",
+    "\n",
+    "#--This is a tab character--\n",
+    "print(\"Hello, \\t world!\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Integer"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 94,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "var1 = 2"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Float"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "var2 = 2.0"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Boolean Values and Expressions"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 90,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "True\n",
+      "<class 'bool'>\n",
+      "<class 'bool'>\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(True)\n",
+    "print(type(True))\n",
+    "print(type(False))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 91,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "True\n",
+      "False\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(5 == 5)\n",
+    "print(5 == 6)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "#### The == operator is one of six common comparison operators; the others are:\n",
+    "##### x != y               # x is not equal to y\n",
+    "##### x > y                # x is greater than y\n",
+    "##### x < y                # x is less than y\n",
+    "##### x >= y               # x is greater than or equal to y\n",
+    "##### x <= y               # x is less than or equal to y"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Checking Types"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 100,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "<class 'int'>\n",
+      "<class 'float'>\n",
+      "<class 'str'>\n",
+      "<class 'bool'>\n"
+     ]
+    }
+   ],
+   "source": [
+    "var1 = 2\n",
+    "var2 = 2.0\n",
+    "var3 = 'apple'\n",
+    "var4 = True\n",
+    "\n",
+    "print(type(var1))\n",
+    "print(type(var2))\n",
+    "print(type(var3))\n",
+    "print(type(var4))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Nested Objects"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Nested Lists"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Nested Dictionaries"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## if/else"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## for loops"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## other types that may be useful"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## How to read an error message"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Functions and Packages"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Built-in Functions (string examples)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Packages (numpy sqrt example)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### How to install packages"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### User made functions"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Debugging"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Data Manipulation"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Loading/Saving JSON"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Loading/Saving pandas"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Viewing/Selecting pandas"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Checking/Changing Column Types"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Summarizing Your Data"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Replacing Values"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Making New Columns (Vector operations)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Applying Functions to Columns"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Renaming Columns, Rows, etc. "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Groupby and Unstack"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Resample and Timedelta"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.7.4"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 4
+}
