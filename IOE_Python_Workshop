@@ -265,7 +265,7 @@
    "outputs": [],
    "source": [
     "#--Here's a dictionary with keys and associated values--\n",
-    "pets = {'cat': 7, 'dog': 6, 'elephant':2}"
+    "pets = {'llama': 7, 'dog': 6, 'elephant':2}"
    ]
   },
   {
@@ -485,25 +485,25 @@
    ],
    "source": [
     "#--Addition--  NOTE: Try subbing in 2.0 for the 2 and see what happens to your result!\n",
-    "print(2+3)\n",
+    "print(6 + 3)\n",
     "\n",
     "#--Subtraction--\n",
-    "print(5-2)\n",
+    "print(6 - 2)\n",
     "\n",
     "#--Multiplication--\n",
-    "print(5*2)\n",
+    "print(6 * 2)\n",
     "\n",
     "#--Exponentation--\n",
-    "print(5**2)\n",
+    "print(6**2)\n",
     "\n",
     "#--Division--\n",
-    "print(9/5)\n",
+    "print(9 / 5)\n",
     "\n",
     "#--Truncated Division--\n",
-    "print(9//5)\n",
+    "print(9 // 5)\n",
     "\n",
     "#--Remainder, or modulus operator--\n",
-    "print(9%5)"
+    "print(9 % 5)"
    ]
   },
   {
@@ -669,7 +669,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "## Checking Types"
+    "## Checking Data Types"
    ]
   },
   {
@@ -711,35 +711,89 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "### Nested Lists"
+    "### Nested Lists\n",
+    "- a collection of lists within a list"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 108,
    "metadata": {},
    "outputs": [],
-   "source": []
+   "source": [
+    "nested_lst = [[2,7,8],[3,1,5],[4,0,9]]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 109,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[2, 7, 8]\n",
+      "8\n"
+     ]
+    }
+   ],
+   "source": [
+    "#--Extracting elements from a nested list--\n",
+    "\n",
+    "print(nested_lst[0])  #--this will give you the 0th element of nested_lst, which is a list\n",
+    "\n",
+    "print(nested_lst[0][2]) #--the will give the 2nd element within the list at index 0 in nested_lst"
+   ]
   },
   {
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "### Nested Dictionaries"
+    "### Nested Dictionaries\n",
+    "- a collection of dictionaries within a single dictionary"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 116,
    "metadata": {},
    "outputs": [],
-   "source": []
+   "source": [
+    "nested_dict = { 'dictA': {'key_1': 'value_1'},\n",
+    "                'dictB': {'key_2': 'value_2'}}\n",
+    "\n",
+    "Dict = { 'Dict1': {'name': 'Kim', 'age': '19'}, \n",
+    "         'Dict2': {'name': 'Alex', 'age': '25'}} "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 114,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{'key_1': 'value_1'}\n",
+      "value_1\n"
+     ]
+    }
+   ],
+   "source": [
+    "#--Accessing values within a nested dictionary--\n",
+    "\n",
+    "print(nested_dict['dictA']) #--accesses the value of dictionary dictA, which is another dictionary\n",
+    "\n",
+    "print(nested_dict['dictA']['key_1']) #--accesses the value of key_1, which is within dictA"
+   ]
   },
   {
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "## if/else"
+    "#### Exercises: Nested Objects "
    ]
   },
   {
@@ -747,7 +801,55 @@
    "execution_count": null,
    "metadata": {},
    "outputs": [],
-   "source": []
+   "source": [
+    "#--Nested List--\n",
+    "\n",
+    "#--1. Can you extract the list at index 0 of nested_lst?\n",
+    "\n",
+    "\n",
+    "#--2. In nexted_lst, from the list at index 2, gather its element at index 1\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#--Nested Dictionary--\n",
+    "\n",
+    "#--1. Can you extract dictB from nested_dict?\n",
+    "\n",
+    "#--2. Can you extract the value of key_2?\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## if/else/elif"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 117,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "b is greater than a\n"
+     ]
+    }
+   ],
+   "source": [
+    "a = 78\n",
+    "b = 200\n",
+    "\n",
+    "if b > a:\n",
+    "    print(\"b is greater than a\")"
+   ]
   },
   {
    "cell_type": "markdown",
