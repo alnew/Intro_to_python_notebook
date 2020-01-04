@@ -16,15 +16,69 @@
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 132,
    "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "45\n",
+      "88\n",
+      "120\n"
+     ]
+    }
+   ],
    "source": [
     "'''where the variable named on the left refers to the value on the right. \n",
     "E.g. if y=x, y should now refer to whatever value x refers to\n",
     "If you assign the value 9 to y, or if y=9, it can be changed in the code below, or it can be updated to y = 23, or even y = ’banana’\n",
-    "'''"
+    "'''\n",
+    "\n",
+    "a = 45\n",
+    "b = 88\n",
+    "c = 120\n",
+    "\n",
+    "print(a)\n",
+    "print(b)\n",
+    "print(c)\n",
+    "#--- https://www.pluralsight.com/guides/python-basics-variables-assignment"
    ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 133,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "88\n",
+      "45\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(b)\n",
+    "\n",
+    "b = a #--change the value of b to equal the value assigned to a\n",
+    "print(b)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
   },
   {
    "cell_type": "markdown",
@@ -60,14 +114,65 @@
    ]
   },
   {
-   "cell_type": "code",
-   "execution_count": 46,
+   "cell_type": "markdown",
    "metadata": {},
-   "outputs": [],
    "source": [
-    "#--Accessing elements of a string--\n",
+    "#### Indexing a List"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 168,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "30\n",
+      "banana\n",
+      "40\n",
+      "apple\n"
+     ]
+    }
+   ],
+   "source": [
+    "#--Indexing: Accessing elements of a string--\n",
     "print(lst1[2])\n",
-    "print(lst2[0])"
+    "print(lst2[0])\n",
+    "\n",
+    "#--Negative Indexing--\n",
+    "print(lst1[-1])\n",
+    "print(lst2[-2])"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "#### Slicing a list"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 176,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[20, 'banana', 'apple']\n",
+      "[20, 'banana', 'apple', 'carrot']\n"
+     ]
+    }
+   ],
+   "source": [
+    "#--Slicing a list--\n",
+    "print(lst3[1:4])\n",
+    "\n",
+    "#--Slicing a list: how is this one different from the one above?--\n",
+    "print(lst3[1:])"
    ]
   },
   {
@@ -657,18 +762,6 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "#### The == operator is one of six common comparison operators; the others are:\n",
-    "##### x != y               # x is not equal to y\n",
-    "##### x > y                # x is greater than y\n",
-    "##### x < y                # x is less than y\n",
-    "##### x >= y               # x is greater than or equal to y\n",
-    "##### x <= y               # x is less than or equal to y"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
     "## Checking Data Types"
    ]
   },
@@ -756,14 +849,14 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 116,
+   "execution_count": 189,
    "metadata": {},
    "outputs": [],
    "source": [
     "nested_dict = { 'dictA': {'key_1': 'value_1'},\n",
     "                'dictB': {'key_2': 'value_2'}}\n",
     "\n",
-    "Dict = { 'Dict1': {'name': 'Kim', 'age': '19'}, \n",
+    "nested_dict2 = { 'Dict1': {'name': 'Kim', 'age': '19'}, \n",
     "         'Dict2': {'name': 'Alex', 'age': '25'}} "
    ]
   },
@@ -827,12 +920,45 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "## if/else/elif"
+    "## if/else/elif\n",
+    "- __When To Use:__ When you would like to compare values\n",
+    "- Notice that the code below the if, else, elif statements are __indented__. \n",
+    " - If you hit enter after putting the : at the end, it should automatically do this for you.\n",
+    " - Other programming languages may use curly-brackets to achieve this.\n",
+    " - If you do not indent the code lines below each statement that you want included, an error will be produced."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "#### Using Indentation"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": 117,
+   "execution_count": 136,
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "IndentationError",
+     "evalue": "expected an indented block (<ipython-input-136-4276c1871af7>, line 4)",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;36m  File \u001b[0;32m\"<ipython-input-136-4276c1871af7>\"\u001b[0;36m, line \u001b[0;32m4\u001b[0m\n\u001b[0;31m    print(\"b is greater than a\") # you will get an error\u001b[0m\n\u001b[0m        ^\u001b[0m\n\u001b[0;31mIndentationError\u001b[0m\u001b[0;31m:\u001b[0m expected an indented block\n"
+     ]
+    }
+   ],
+   "source": [
+    "a = 55\n",
+    "b = 320\n",
+    "if b > a:\n",
+    "print(\"b is greater than a\") #--This will produce an error"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 118,
    "metadata": {},
    "outputs": [
     {
@@ -844,32 +970,25 @@
     }
    ],
    "source": [
-    "a = 78\n",
-    "b = 200\n",
+    "a = 45\n",
+    "b = 88\n",
+    "c = 120\n",
     "\n",
     "if b > a:\n",
-    "    print(\"b is greater than a\")"
+    "    print(\"b is greater than a\") #--This will not produce an error, it is indented and included in the if portion of the statement"
    ]
   },
   {
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "## for loops"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": []
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "## other types that may be useful"
+    "#### The 6 Common Comparison Operators (These can be used in your if/else/elif statements):\n",
+    "##### x == y               # x and y have the same values \n",
+    "##### x != y               # x is not equal to y\n",
+    "##### x > y                # x is greater than y\n",
+    "##### x < y                # x is less than y\n",
+    "##### x >= y               # x is greater than or equal to y\n",
+    "##### x <= y               # x is less than or equal to y"
    ]
   },
   {
@@ -877,13 +996,283 @@
    "execution_count": null,
    "metadata": {},
    "outputs": [],
-   "source": []
+   "source": [
+    "if b > a:\n",
+    "    print(\"b is greater than a\")\n",
+    "else:\n",
+    "    print(\"b is less than a\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 119,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "b is greater than a\n"
+     ]
+    }
+   ],
+   "source": [
+    "if b > a:\n",
+    "    print(\"b is greater than a\")\n",
+    "    \n",
+    "elif b == a: #--elif says if the previous conditions were not true, then try this condition\n",
+    "    print(\"b equals a\")\n",
+    "    \n",
+    "else:\n",
+    "    print(\"b is less than a\")"
+   ]
   },
   {
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "## How to read an error message"
+    "### Using and/or Operators\n",
+    "- These operators are used to combine conditional statements"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 145,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "At least one of the conditions is True\n",
+      "a equals b\n"
+     ]
+    }
+   ],
+   "source": [
+    "#--Comparing more than 2 values at a time. Change the values of a, b, and c and see what happens--\n",
+    "\n",
+    "if a == b and a == c:\n",
+    "    print(\"a equals b and c\")\n",
+    "    \n",
+    "elif a == b or a == c:\n",
+    "    print(\"At least one of the conditions is True\")\n",
+    "    \n",
+    "    if a == b:\n",
+    "        print(\"a equals b\")\n",
+    "    else:\n",
+    "        print(\"a equals c\")\n",
+    "        \n",
+    "else:\n",
+    "    print(\"a does not equal b or c\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Exercises for if/else/elif"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 141,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "a = 88\n",
+    "b = 88\n",
+    "c = 42\n",
+    "d = 10\n",
+    "\n",
+    "e = 'pen'\n",
+    "f = 'pencil'"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 143,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "b and a are equal\n"
+     ]
+    }
+   ],
+   "source": [
+    "#--1. Change the values of a, b, and c and see what happens--\n",
+    "\n",
+    "if b > a:\n",
+    "    print(\"b is greater than a\")\n",
+    "    \n",
+    "elif b == a:\n",
+    "    print(\"b and a are equal\")\n",
+    "    \n",
+    "else:\n",
+    "    print(\"b is less than a\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 142,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "True\n"
+     ]
+    }
+   ],
+   "source": [
+    "#--2. What do you think will happen when you run this code? Try changing the values of d and e and see what happens--\n",
+    "\n",
+    "if e in f:\n",
+    "    print(True)\n",
+    "    \n",
+    "elif e == f:\n",
+    "    print(\"e and f are equal\")\n",
+    "    \n",
+    "else:\n",
+    "    print(False)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 144,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "b is greater than c\n"
+     ]
+    }
+   ],
+   "source": [
+    "#--3. You can have more than 1 elif. Change the values of a, b, c, and d and see what happens--\n",
+    "\n",
+    "if b > a:\n",
+    "    print(\"b is greater than a\")\n",
+    "elif b > c:\n",
+    "    print(\"b is greater than c\")\n",
+    "elif b > d:\n",
+    "    print(\"b is greater than d\")\n",
+    "else:\n",
+    "    print(\"b is not greater than a, c, or d\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 139,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#--4. Try writing your own if/else/elif statement below using a, b, and c--"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## for loops\n",
+    "- __When To Use:__ To iterate over a sequence (such as a list, string, set, tuple, or dictionary)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 148,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "tree_lst = ['maple', 'pine', 'oak', 'spruce']\n",
+    "\n",
+    "num_lst1 = [1, 2, 3, 4, 5]\n",
+    "num_lst2 = [1, 2, [0, 8], 4, 5]\n",
+    "\n",
+    "grocery_dict = {'apples': 5, 'bananas': 2, 'oranges': 3}"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 149,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "1\n",
+      "2\n",
+      "3\n",
+      "4\n",
+      "5\n"
+     ]
+    }
+   ],
+   "source": [
+    "#--Looping through the elements of num_lst1--\n",
+    "for x in num_lst1:\n",
+    "    print(x)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 150,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "1\n",
+      "2\n",
+      "[0, 8]\n",
+      "4\n",
+      "5\n"
+     ]
+    }
+   ],
+   "source": [
+    "#--How does the output of num_lst2 differ from that of num_lst1?--\n",
+    "for x in num_lst2:\n",
+    "    print(x)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 152,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "b\n",
+      "a\n",
+      "n\n",
+      "a\n",
+      "n\n",
+      "a\n"
+     ]
+    }
+   ],
+   "source": [
+    "#--Looping through the elements in a string--\n",
+    "for x in 'banana': \n",
+    "    print(x)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "#### Exercises: for loops"
    ]
   },
   {
@@ -891,13 +1280,234 @@
    "execution_count": null,
    "metadata": {},
    "outputs": [],
-   "source": []
+   "source": [
+    "num_lst3 = [[1, 2], [0, 8], [4, 5]]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#--1. Use a for loop to loop through num_lst3--"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#--2. Use a for loop to print out the 0th element of each sublist in num_lst3"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 163,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#--3. Combining if/else with for loops--\n",
+    "\n",
+    "# for x in tree_lst:\n",
+    "#     if 'oak' in x:\n",
+    "#         print(True)\n",
+    "#     else:\n",
+    "#         print(False)"
+   ]
   },
   {
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "# Functions and Packages"
+    "## Other types that may be useful: Tuple, Set "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Tuple \n",
+    "- a collection which is ordered and __unchangeable__."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 166,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "pine\n"
+     ]
+    }
+   ],
+   "source": [
+    "x = ('maple', 'pine', 'oak', 'spruce')\n",
+    "\n",
+    "print(x[1])"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Set\n",
+    "- A collection which is unordered and unindexed. \n",
+    "- In Python sets are written with curly brackets."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 177,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{'maple', 'oak', 'pine'}\n"
+     ]
+    }
+   ],
+   "source": [
+    "set1 = {'maple', 'pine', 'oak'}\n",
+    "print(set1)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 178,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "maple\n",
+      "oak\n",
+      "pine\n"
+     ]
+    }
+   ],
+   "source": [
+    "#--How to access elements of a set--\n",
+    "for x in set1:\n",
+    "  print(x)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## How To Read an Error Message\n",
+    "- There are many different types of errors, here we'll cover a few you may encounter when starting out"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Syntax, Name, and Indentation Errors"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 185,
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "SyntaxError",
+     "evalue": "invalid syntax (<ipython-input-185-b03ea80826b7>, line 3)",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;36m  File \u001b[0;32m\"<ipython-input-185-b03ea80826b7>\"\u001b[0;36m, line \u001b[0;32m3\u001b[0m\n\u001b[0;31m    if spam == 34\u001b[0m\n\u001b[0m                 ^\u001b[0m\n\u001b[0;31mSyntaxError\u001b[0m\u001b[0;31m:\u001b[0m invalid syntax\n"
+     ]
+    }
+   ],
+   "source": [
+    "#--What's wrong with the code below?--\n",
+    "\n",
+    "if spam == 34\n",
+    "    print('Hi there!')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 187,
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "IndentationError",
+     "evalue": "unexpected indent (<ipython-input-187-44021988771f>, line 5)",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;36m  File \u001b[0;32m\"<ipython-input-187-44021988771f>\"\u001b[0;36m, line \u001b[0;32m5\u001b[0m\n\u001b[0;31m    print('Hello!')\u001b[0m\n\u001b[0m    ^\u001b[0m\n\u001b[0;31mIndentationError\u001b[0m\u001b[0;31m:\u001b[0m unexpected indent\n"
+     ]
+    }
+   ],
+   "source": [
+    "spam = 22\n",
+    "\n",
+    "if spam == 34:\n",
+    "    print('Hi there!')\n",
+    "        print('Hello!')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 191,
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "NameError",
+     "evalue": "name 'va1' is not defined",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mNameError\u001b[0m                                 Traceback (most recent call last)",
+      "\u001b[0;32m<ipython-input-191-706c46fd62be>\u001b[0m in \u001b[0;36m<module>\u001b[0;34m\u001b[0m\n\u001b[1;32m      1\u001b[0m \u001b[0mvar1\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0;34m'Ky'\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      2\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m----> 3\u001b[0;31m \u001b[0mprint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m\"Hello, my name is\"\u001b[0m \u001b[0;34m+\u001b[0m \u001b[0mva1\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m",
+      "\u001b[0;31mNameError\u001b[0m: name 'va1' is not defined"
+     ]
+    }
+   ],
+   "source": [
+    "var1 = 'Ky'\n",
+    "\n",
+    "print(\"Hello, my name is\" + va1)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 194,
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "AttributeError",
+     "evalue": "'str' object has no attribute 'upperr'",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mAttributeError\u001b[0m                            Traceback (most recent call last)",
+      "\u001b[0;32m<ipython-input-194-a34351d8c353>\u001b[0m in \u001b[0;36m<module>\u001b[0;34m\u001b[0m\n\u001b[1;32m      1\u001b[0m \u001b[0mvar2\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0;34m'hello'\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      2\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m----> 3\u001b[0;31m \u001b[0mprint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mvar2\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mupperr\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m",
+      "\u001b[0;31mAttributeError\u001b[0m: 'str' object has no attribute 'upperr'"
+     ]
+    }
+   ],
+   "source": [
+    "var2 = 'hello'\n",
+    "\n",
+    "print(var2.upperr())"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Section 2: Functions and Packages"
    ]
   },
   {
@@ -913,6 +1523,18 @@
    "metadata": {},
    "outputs": [],
    "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "len()\n",
+    ".upper()\n",
+    ".lower()\n",
+    ".split()"
+   ]
   },
   {
    "cell_type": "markdown",
@@ -974,7 +1596,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "# Data Manipulation"
+    "# Section 3: Data Manipulation"
    ]
   },
   {
