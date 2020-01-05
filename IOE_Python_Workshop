@@ -767,7 +767,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 100,
+   "execution_count": 212,
    "metadata": {},
    "outputs": [
     {
@@ -791,6 +791,63 @@
     "print(type(var2))\n",
     "print(type(var3))\n",
     "print(type(var4))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Converting Data Types"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 217,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "float"
+      ]
+     },
+     "execution_count": 217,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "#--Changing the type of var1 from int to float--\n",
+    "var1_float = float(var1)\n",
+    "var1_float\n",
+    "\n",
+    "#--Check the type for var1_float, uncomment the code below--\n",
+    "# type(var1_float)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 216,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'2'"
+      ]
+     },
+     "execution_count": 216,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "#--Changing the type of var1 from int to str--\n",
+    "var1_str = str(var1)\n",
+    "var1_str\n",
+    "\n",
+    "#--Check the type for var1_str, uncomment the code below--\n",
+    "# type(var1_str)"
    ]
   },
   {
@@ -1507,14 +1564,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "# Section 2: Functions and Packages"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "### Built-in Functions (string examples)"
+    "#### Exercises: Error Messages"
    ]
   },
   {
@@ -1529,12 +1579,155 @@
    "execution_count": null,
    "metadata": {},
    "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
    "source": [
-    "len()\n",
-    ".upper()\n",
-    ".lower()\n",
-    ".split()"
+    "# Section 2: Functions and Packages"
    ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Methods, or Built-in Functions (string examples)\n",
+    "- String methods will not change the original string, they will return a new one"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 207,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "str"
+      ]
+     },
+     "execution_count": 207,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "#--String Manipulation Functions--\n",
+    "str_message = \"What to Expecet From Space Exploration in 2020: Mars, Tourism, Blue Origin, SpaceX and More\"\n",
+    "\n",
+    "type(str_message)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 200,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'WHAT TO EXPECET FROM SPACE EXPLORATION IN 2020: MARS, TOURISM, BLUE ORIGIN SPACEX AND MORE'"
+      ]
+     },
+     "execution_count": 200,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "str_message.upper()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 201,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'what to expecet from space exploration in 2020: mars, tourism, blue origin spacex and more'"
+      ]
+     },
+     "execution_count": 201,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "str_message.lower()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 210,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "90"
+      ]
+     },
+     "execution_count": 210,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "#--NOTE: This function can also be used on a list--\n",
+    "len(str_message)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 209,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['What',\n",
+       " 'to',\n",
+       " 'Expecet',\n",
+       " 'From',\n",
+       " 'Space',\n",
+       " 'Exploration',\n",
+       " 'in',\n",
+       " '2020:',\n",
+       " 'Mars,',\n",
+       " 'Tourism,',\n",
+       " 'Blue',\n",
+       " 'Origin',\n",
+       " 'SpaceX',\n",
+       " 'and',\n",
+       " 'More']"
+      ]
+     },
+     "execution_count": 209,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "#--NOTE: This function can also be used on a list--\n",
+    "str_message.split()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "#### Exercises: Built-in Functions"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
   },
   {
    "cell_type": "markdown",
@@ -1545,6 +1738,118 @@
   },
   {
    "cell_type": "code",
+   "execution_count": 223,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "4.0\n"
+     ]
+    }
+   ],
+   "source": [
+    "#--Finding the square root by hand--\n",
+    "\n",
+    "x=16\n",
+    "sqrt = x**(1/2)\n",
+    "print(sqrt)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 226,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "4.0"
+      ]
+     },
+     "execution_count": 226,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "import numpy as np\n",
+    "\n",
+    "np.sqrt(x)  #--this will return the float value of the square root of x\n",
+    "\n",
+    "# np.sqrt([1, 4, 9, 64])"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### How to Install Python Packages"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "#### 1. Determine your Python version.\n",
+    "- See if the package you want to install is compatible\n",
+    "- See more instructions here: https://docs.anaconda.com/anaconda/user-guide/tasks/install-packages/"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 229,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "3.7.4\n"
+     ]
+    }
+   ],
+   "source": [
+    "from platform import python_version\n",
+    "\n",
+    "print(python_version())"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "#### 2. If your Python version is compatible, in a terminal, install the package using:\n",
+    "- Open terminal: File >> New >> Terminal \n",
+    "- conda install package-name"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#--Exercise: Let's install a package in the terminal!"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
    "execution_count": null,
    "metadata": {},
    "outputs": [],
@@ -1554,7 +1859,126 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "### How to install packages"
+    "### User Made Functions\n",
+    "- a function is a chunk of code that only runs when it's called\n",
+    "- data can be passed into the function using __parameters__\n",
+    "- data can be returned from the function call"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 249,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#--Function without parameters--\n",
+    "\n",
+    "def hello_1():\n",
+    "    #--This function says hello and greets you\n",
+    "    print(\"Hi!\")\n",
+    "    print(\"Nice to meet you.\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 250,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Hi!\n",
+      "Nice to meet you.\n"
+     ]
+    }
+   ],
+   "source": [
+    "#--calling the hello function--\n",
+    "\n",
+    "hello_1()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 251,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Hi!\n",
+      "Nice to meet you.\n",
+      "None\n"
+     ]
+    }
+   ],
+   "source": [
+    "#--Saving the result of the function call--\n",
+    "\n",
+    "greeting = hello_1()\n",
+    "print(greeting)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "#### Adding 1 parameter to the function"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 252,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Hi, my_name\n",
+      "Nice to meet you.\n"
+     ]
+    }
+   ],
+   "source": [
+    "def hello_2(name):\n",
+    "    #--This function says hello and greets you\n",
+    "    print(\"Hi,\" + \" \" + name) \n",
+    "    print(\"Nice to meet you.\")\n",
+    "    \n",
+    "hello_2('my_name')  #--Change the string inside the function call to a different name"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "#### Adding 2 parameters to the function"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 253,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Hi, first last\n",
+      "Nice to meet you.\n"
+     ]
+    }
+   ],
+   "source": [
+    "def hello_3(f_name, l_name):\n",
+    "    #--This function says hello and greets you\n",
+    "    print(\"Hi,\" + \" \" + f_name + \" \" + l_name)  \n",
+    "    print(\"Nice to meet you.\")\n",
+    "    \n",
+    "hello_3('first', 'last')"
    ]
   },
   {
@@ -1568,7 +1992,114 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "### User made functions"
+    "#### Returning a Value From a Function\n",
+    "- When you would like to save data from a called function, use return instead of print inside of the function\n",
+    " - print() helps the user see how a program works and for debugging; print() does not help the computer\n",
+    " - return is the way a function returns a value"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 261,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#--Squaring Values-- \n",
+    "\n",
+    "def my_function(num):\n",
+    "    square = num * num\n",
+    "    return square"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 262,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "16"
+      ]
+     },
+     "execution_count": 262,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "#--Calling the function--\n",
+    "\n",
+    "my_function(4)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 268,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "I printed\n",
+      "Let's see what the values of f1 and f2 are: \n",
+      "None\n",
+      "I returned\n"
+     ]
+    }
+   ],
+   "source": [
+    "#--Why you should use return instead of print--\n",
+    "\n",
+    "def function_prints():\n",
+    "    print (\"I printed\")\n",
+    "\n",
+    "def function_returns():\n",
+    "    return \"I returned\"\n",
+    "\n",
+    "func1 = function_prints()\n",
+    "func2 = function_returns()\n",
+    "print (\"Let's see what the values of f1 and f2 are: \")\n",
+    "print (func1) #--What value does print() give?\n",
+    "print (func2) #--What value does return give?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "#### Exercises: User Made Functions"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#--1. \n",
+    "\n",
+    "def my_function():\n",
+    "    pass"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 254,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Hi, first\n",
+      "Nice to meet you.\n"
+     ]
+    }
+   ],
+   "source": [
+    "#--2. \n"
    ]
   },
   {
@@ -1582,8 +2113,91 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "### Debugging"
+    "### Debugging\n",
+    "- An error in your code is called a bug\n",
+    " - Bugs happen, if you get red, no worries!\n",
+    " - Let's fix some bugs!\n",
+    "- Remember the Error Messages we saw earlier? Those will come in handy here."
    ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 276,
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "SyntaxError",
+     "evalue": "invalid syntax (<ipython-input-276-2c28926be45d>, line 3)",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;36m  File \u001b[0;32m\"<ipython-input-276-2c28926be45d>\"\u001b[0;36m, line \u001b[0;32m3\u001b[0m\n\u001b[0;31m    def my_function(num)\u001b[0m\n\u001b[0m                        ^\u001b[0m\n\u001b[0;31mSyntaxError\u001b[0m\u001b[0;31m:\u001b[0m invalid syntax\n"
+     ]
+    }
+   ],
+   "source": [
+    "#--Run this code, what errors do you see? What needs to be fixed?--\n",
+    "\n",
+    "def my_function(num)\n",
+    "    square = num * nu\n",
+    "    return square\n",
+    "\n",
+    "my_functin(5)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 277,
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "SyntaxError",
+     "evalue": "invalid syntax (<ipython-input-277-2c28926be45d>, line 3)",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;36m  File \u001b[0;32m\"<ipython-input-277-2c28926be45d>\"\u001b[0;36m, line \u001b[0;32m3\u001b[0m\n\u001b[0;31m    def my_function(num)\u001b[0m\n\u001b[0m                        ^\u001b[0m\n\u001b[0;31mSyntaxError\u001b[0m\u001b[0;31m:\u001b[0m invalid syntax\n"
+     ]
+    }
+   ],
+   "source": [
+    "#--1. Run this code, what errors do you see? What needs to be fixed?--\n",
+    "#--2. Uncomment pass, then comment out the line with square and return, then debug line-by-line--\n",
+    "#--3. Is your returned result what you expected for this function?\n",
+    "\n",
+    "def my_function(num)\n",
+    "#     pass\n",
+    "    square = num - num\n",
+    "    return square\n",
+    "\n",
+    "my_functin(5)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "#### Exercises: Debugging"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
   },
   {
    "cell_type": "code",
